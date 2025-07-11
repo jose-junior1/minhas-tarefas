@@ -1,18 +1,21 @@
 import styled from 'styled-components'
 import variaveis from '../../containers/ListaDeTarefas/variaveis'
+import * as enums from '../../utils/enums/TarefaEnums'
 
 type TagProps = {
-  prioridade?: string
-  status?: string
+  prioridade?: enums.Prioridade
+  status?: enums.Status
+  parametro: 'status' | 'prioridade'
 }
 
 function retornaCorDeFundo(props: TagProps): string {
-  if ('status' in props) {
-    if (props.status === 'pendente') return variaveis.amarelo
-    if (props.status === 'concluído') return variaveis.verde
-  } else if ('prioridade' in props) {
-    if (props.prioridade === 'urgente') return variaveis.vermelho
-    if (props.prioridade === 'importante') return variaveis.alaranjado
+  if (props.parametro === 'status') {
+    if (props.status === enums.Status.PENDENTE) return variaveis.amarelo
+    if (props.status === enums.Status.CONCLUIDO) return variaveis.verde
+  } else {
+    if (props.prioridade === enums.Prioridade.URGENTE) return variaveis.vermelho
+    if (props.prioridade === enums.Prioridade.IMPORTANTE)
+      return variaveis.alaranjado
   }
 
   return '#ccc'
