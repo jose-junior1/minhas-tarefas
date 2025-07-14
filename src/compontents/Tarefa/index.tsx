@@ -1,26 +1,26 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+
 import * as S from './styles'
-import * as enums from '../../utils/enums/TarefaEnums'
 
-export type Props = {
-  titulo: string
-  prioridade: enums.Prioridade
-  status: enums.Status
-  descricao: string
-}
+import { remover } from '../../store/reducers/tarefas'
+import TarefaClass from '../../models/Tarefa'
 
-const Tarefa = ({ titulo, prioridade, status, descricao }: Props) => {
+export type Props = TarefaClass
+
+const Tarefa = ({ titulo, prioridade, status, descricao, id }: Props) => {
+  const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
   return (
     <S.Card>
       <S.Title>{titulo}</S.Title>
-      <S.Tags parametro="prioridade" prioridade={prioridade}>
+      <S.Tags $parametro="prioridade" $prioridade={prioridade}>
         {prioridade}
       </S.Tags>
-      <S.Tags parametro="status" status={status}>
+      <S.Tags $parametro="status" $status={status}>
         {status}
       </S.Tags>
-      <S.Description value={descricao} />
+      <S.Description value={descricao} readOnly />
       <S.ActionBar>
         {estaEditando ? (
           <>
@@ -32,7 +32,9 @@ const Tarefa = ({ titulo, prioridade, status, descricao }: Props) => {
         ) : (
           <>
             <S.Button onClick={() => setEstaEditando(true)}>Editar</S.Button>
-            <S.ButtonCancelAndRemove>Remover</S.ButtonCancelAndRemove>
+            <S.ButtonCancelAndRemove onClick={() => dispatch(remover(id))}>
+              Remover
+            </S.ButtonCancelAndRemove>
           </>
         )}
       </S.ActionBar>
