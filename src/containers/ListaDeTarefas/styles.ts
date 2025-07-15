@@ -6,3 +6,13 @@ export const Main = styled.main`
   height: 100vh;
   overflow-y: scroll;
 `
+
+export const ContainerFiltros = styled.div`
+  margin: 40px 0;
+
+  p {
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+  }
+`

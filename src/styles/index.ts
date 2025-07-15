@@ -8,6 +8,10 @@ const EstiloGlobal = createGlobalStyle`
     font-family: Roboto, sans-serif;
     list-style: none;
   }
+
+  body {
+    cursor: url('/cursor.png'), auto;
+  }
 `
 
 export const Container = styled.div`

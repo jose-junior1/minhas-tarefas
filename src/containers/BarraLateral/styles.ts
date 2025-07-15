@@ -14,6 +14,14 @@ export const Campo = styled.input`
   background-color: #fff;
   padding: 8px;
   font-size: 14px;
+  cursor: url('/text-cursor.png') 10 10, auto;
+  &:hover {
+    background-color: #fff;
+    border: 1px solid green;
+    transition: all 0.1s ease-in-out;
+    transform: scale(1.03);
+    font-weight: bold;
+  }
 `
 
 export const Filtros = styled.div`

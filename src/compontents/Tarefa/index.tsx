@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 
 import * as S from './styles'
@@ -29,6 +29,15 @@ const Tarefa = ({
     setEstaEditando(false)
     setDescricao(descricaoOriginal)
   }
+
+  const descriptionRef = useRef<HTMLTextAreaElement>(null)
+
+  useEffect(() => {
+    if (estaEditando && descriptionRef.current) {
+      descriptionRef.current.focus()
+    }
+  }, [estaEditando])
+
   return (
     <S.Card>
       <S.Title>{titulo}</S.Title>
@@ -39,6 +48,7 @@ const Tarefa = ({
         {status}
       </S.Tags>
       <S.Description
+        ref={descriptionRef}
         disabled={!estaEditando}
         value={descricao}
         onChange={(evento) => setDescricao(evento.target.value)}
