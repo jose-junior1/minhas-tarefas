@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import Tarefa from '../../compontents/Tarefa'
-import * as S from './styles'
+import * as S from '../../styles'
 import { RootReducer } from '../../store'
 
 const ListaDeTarefas = () => {
@@ -55,9 +55,7 @@ const ListaDeTarefas = () => {
 
   return (
     <S.Main>
-      <S.ContainerFiltros>
-        <p>{mensagem}</p>
-      </S.ContainerFiltros>
+      <S.Titulo as="p">{mensagem}</S.Titulo>
       <ul>
         {qntTarefas.map((t) => (
           <li key={t.titulo}>

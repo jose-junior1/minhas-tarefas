@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import variaveis from '../../containers/ListaDeTarefas/variaveis'
+import variaveis from '../../styles/variaveis'
 import * as enums from '../../utils/enums/TarefaEnums'
 
 type TagProps = {
@@ -72,10 +72,6 @@ export const Button = styled.button`
   background-color: #2f3640;
   border-radius: 8px;
   margin-right: 8px;
-`
-
-export const ButtonSave = styled(Button)`
-  background-color: ${variaveis.verde};
 `
 
 export const ButtonCancelAndRemove = styled(Button)`

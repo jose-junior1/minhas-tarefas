@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { pulsar } from '../../styles/animations'
 
 export const BotaoAdd = styled(Link)`
   display: flex;
@@ -16,4 +17,8 @@ export const BotaoAdd = styled(Link)`
   bottom: 40px;
   right: 40px;
   cursor: url('/pointer.png') 10 2, auto;
+
+  &:hover {
+    animation: ${pulsar} 1s infinite;
+  }
 `
