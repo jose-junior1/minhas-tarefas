@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import variaveis from '../../styles/variaveis'
 import * as enums from '../../utils/enums/TarefaEnums'
+import { Button } from '../../styles'
 
 type TagProps = {
   $prioridade?: enums.Prioridade
@@ -29,12 +30,24 @@ export const Card = styled.div`
   display: block;
   margin-bottom: 32px;
   border-radius: 16px;
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    input,
+    h3 {
+      cursor: url('/pointer.png') 10 2, auto;
+    }
+  }
 `
 export const Title = styled.h3`
   font-weight: bold;
   font-size: 18px;
-  margin-bottom: 16px;
+  margin-left: 8px;
 `
+
 export const Tags = styled.span<TagProps>`
   padding: 4px 8px;
   font-size: 10px;
@@ -45,6 +58,7 @@ export const Tags = styled.span<TagProps>`
   margin-right: 16px;
   display: inline-block;
 `
+
 export const Description = styled.textarea`
   color: #8b8b8b;
   font-size: 14px;
@@ -58,20 +72,10 @@ export const Description = styled.textarea`
   border: none;
   background: transparent;
 `
+
 export const ActionBar = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 16px;
-`
-export const Button = styled.button`
-  font-size: 12px;
-  font-weight: bold;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  cursor: url('/pointer.png') 10 2, auto;
-  background-color: #2f3640;
-  border-radius: 8px;
-  margin-right: 8px;
 `
 
 export const ButtonCancelAndRemove = styled(Button)`

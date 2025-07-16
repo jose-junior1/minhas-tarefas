@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import { Button } from '../compontents/Tarefa/styles'
 import variaveis from './variaveis'
 
 const EstiloGlobal = createGlobalStyle`
@@ -46,6 +45,18 @@ export const Campo = styled.input`
     transform: scale(1.03);
     font-weight: bold;
   }
+`
+
+export const Button = styled.button`
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: url('/pointer.png') 10 2, auto;
+  background-color: #2f3640;
+  border-radius: 8px;
+  margin-right: 8px;
 `
 
 export const Container = styled.div`
