@@ -57,8 +57,8 @@ O layout foi adaptado para funcionar bem em **dispositivos móveis**, com:
 
 ## 📷 Imagens do Projeto
 
-![Tela inicial](./public/home-com-filtro.png) &nbsp;
-![Tela de cadastro](./public/tela-cadastro.png)
+![Tela inicial](./src/assets/img/home-com-filtro.png) &nbsp;
+![Tela de cadastro](./src/assets/img/tela-cadastro.png)
 
 ---
 
