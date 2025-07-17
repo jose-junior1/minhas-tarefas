@@ -1,46 +1,101 @@
-# Getting Started with Create React App
+# 📝 Minhas Tarefas — App de Gestão com React + Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto criado como parte do curso de Engenharia Front-End da [EBAC](https://ebaconline.com.br), e posteriormente **melhorado por mim** com foco em **responsividade, acessibilidade e experiência de usuário**.
 
-## Available Scripts
+[`v2` no GitHub](https://github.com/jose-junior1/minhas-tarefas/tree/v2)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- ✅   Cadastro e edição de tarefas
+- ✅   Filtros por status e prioridade
+- ✅   Responsivo para dispositivos móveis (até 768px)
+- ✅   Menu hambúrguer com animação
+- ✅   **Cursores personalizados** para interação visual mais intuitiva
+- ✅   Scroll isolado na lista de tarefas
+- ✅   Acessibilidade com `aria-label`
+- ✅   Animações com `styled-components`
+- ✅   Navegação entre páginas com React Router
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**
+- **TypeScript**
+- **Redux** (gerenciamento de estado global)
+- **React Router DOM**
+- **styled-components**
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![React](https://img.shields.io/badge/react-%5E18.0.0-blue?logo=react)
+![Redux](https://img.shields.io/badge/redux--toolkit-%5E1.9.0-purple?logo=redux)
+![TypeScript](https://img.shields.io/badge/typescript-%5E5.0.0-blue?logo=typescript)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Detalhes de Design
 
-### `npm run eject`
+- 📱 Layout mobile-first
+- 🧭 Menu lateral com botão hamburguer
+- 🖱️ **Cursores personalizados** para botões e elementos clicáveis
+- 🎯 Separação clara entre tarefas pendentes, em andamento e concluídas
+- 🔒 Acessibilidade e usabilidade como prioridade
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📱 Responsividade
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+O layout foi adaptado para funcionar bem em **dispositivos móveis**, com:
+- Menu lateral deslizante
+- Botão hambúrguer com animação de abertura
+- Scroll apenas nas tarefas, com altura de tela fixa
+- Componentes otimizados para touch e telas menores
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 📷 Imagens do Projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="center">
+  <img src="./src/assets/img/home-com-filtro.png" alt="Tela inicial com filtro" width="500"  />
+  &nbsp;&nbsp;
+  <img src="./src/assets/img/tela-cadastro.png" alt="Tela de cadastro de tarefas" width="500" />
+</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## 📦 Instalação e Uso Local
+
+```bash
+git clone https://github.com/jose-junior1/minhas-tarefas.git
+cd minhas-tarefas
+git checkout v2
+npm install
+npm start
+```
+---
+
+## 🧠 Sobre o Desenvolvimento
+
+Durante o curso da EBAC, o projeto foi construído com base no aprendizado prático de React, Redux e estilização moderna.
+Na branch v2, adicionei melhorias próprias, incluindo:
+
+- Boas práticas de UI/UX
+- Cursores personalizados com cursor: url() e fallback
+- Responsividade completa
+- Animações e transições suaves
+- Separação de componentes por responsabilidade
+
+---
+
+## 🔗 Acesse o projeto
+
+> 🔗 Acesse online: _[Em breve com Vercel](#)_
+
+---
+
+## 📚 Licença
+
+Projeto com fins educacionais.
+
