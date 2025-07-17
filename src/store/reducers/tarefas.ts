@@ -6,45 +6,14 @@ type TarefasState = {
   itens: Tarefa[]
 }
 
+const tarefasArmazenadas = localStorage.getItem('tarefas')
+
+const tarefasIniciais: Tarefa[] = tarefasArmazenadas
+  ? JSON.parse(tarefasArmazenadas)
+  : []
+
 const initialState: TarefasState = {
-  itens: [
-    {
-      id: 1,
-      titulo: 'Estudar JavaScript',
-      prioridade: enums.Prioridade.URGENTE,
-      status: enums.Status.CONCLUIDO,
-      descricao: 'Estudar JavaScript com o Gustavo Guanabara'
-    },
-    {
-      id: 2,
-      titulo: 'Estudar React',
-      prioridade: enums.Prioridade.IMPORTANTE,
-      status: enums.Status.PENDENTE,
-      descricao: 'Estudar React para conseguir primeira vaga dev'
-    },
-    {
-      id: 3,
-      titulo: 'Estudar TypeScript',
-      prioridade: enums.Prioridade.IMPORTANTE,
-      status: enums.Status.PENDENTE,
-      descricao: 'Estudar TypeScript para fundamentar React'
-    },
-    {
-      id: 4,
-      titulo: 'Lavar louça',
-      prioridade: enums.Prioridade.NORMAL,
-      status: enums.Status.CONCLUIDO,
-      descricao: 'Lavar a louça da janta / café'
-    },
-    {
-      id: 5,
-      titulo: 'Arrumar a cama',
-      prioridade: enums.Prioridade.NORMAL,
-      status: enums.Status.CONCLUIDO,
-      descricao:
-        'Dobrar as cobertas, arrumar os travesseiros e esticar o lençol'
-    }
-  ]
+  itens: tarefasIniciais
 }
 
 const tarefasSlice = createSlice({
@@ -65,7 +34,7 @@ const tarefasSlice = createSlice({
         state.itens[indiceDaTarefa] = action.payload
       }
     },
-    cadastrar: (state, action: PayloadAction<Tarefa>) => {
+    cadastrar: (state, action: PayloadAction<Omit<Tarefa, 'id'>>) => {
       const tarefaExiste = state.itens.find(
         (tarefa) =>
           tarefa.titulo.toLowerCase() === action.payload.titulo.toLowerCase()
@@ -74,7 +43,12 @@ const tarefasSlice = createSlice({
       if (tarefaExiste) {
         alert('Já existe uma tarefa com este nome')
       } else {
-        state.itens.push(action.payload)
+        const ultimaTarefa = state.itens[state.itens.length - 1]
+        const tarefaNova = {
+          ...action.payload,
+          id: ultimaTarefa ? ultimaTarefa.id + 1 : 1
+        }
+        state.itens.push(tarefaNova)
       }
     },
     alteraStatus: (

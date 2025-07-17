@@ -6,6 +6,7 @@ import EstiloGlobal, { Container } from './styles'
 import store from './store'
 import Home from './pages/Home'
 import Cadastro from './pages/Cadastro'
+import Rodape from './compontents/Rodape'
 
 const rotas = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ function App() {
       <Container>
         <RouterProvider router={rotas} />
       </Container>
+      <Rodape />
     </Provider>
   )
 }

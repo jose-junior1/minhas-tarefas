@@ -5,7 +5,7 @@ export const pulsar = keyframes`
     transform: scale(1);
   }
   50% {
-    transform: scale(1.15);
+    transform: scale(1.10);
   }
   100% {
     transform: scale(1);

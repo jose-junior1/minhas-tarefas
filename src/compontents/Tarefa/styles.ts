@@ -20,11 +20,11 @@ function retornaCorDeFundo(props: TagProps): string {
       return variaveis.alaranjado
   }
 
-  return '#ccc'
+  return variaveis.cinzaClaro
 }
 
 export const Card = styled.div`
-  background-color: #fcfcfc;
+  background-color: ${variaveis.branco2};
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   padding: 16px;
   display: block;
@@ -41,6 +41,10 @@ export const Card = styled.div`
       cursor: url('/pointer.png') 10 2, auto;
     }
   }
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `
 export const Title = styled.h3`
   font-weight: bold;
@@ -52,30 +56,49 @@ export const Tags = styled.span<TagProps>`
   padding: 4px 8px;
   font-size: 10px;
   font-weight: bold;
-  color: #fff;
+  color: ${variaveis.branco};
   background-color: ${(props) => retornaCorDeFundo(props)};
   border-radius: 8px;
   margin-right: 16px;
   display: inline-block;
+
+  @media (max-width: 768px) {
+    padding: 8px;
+    width: 30%;
+    margin: 16px 10px;
+  }
 `
 
 export const Description = styled.textarea`
-  color: #8b8b8b;
+  color: ${variaveis.cinza2};
   font-size: 14px;
   line-height: 24px;
   font-family: 'Roboto Mono', monospace;
   display: block;
   width: 100%;
   resize: none;
-  margin-top: 16px;
   margin-bottom: 16px;
   border: none;
   background: transparent;
+
+  @media (max-width: 768px) {
+    text-align: justify;
+    height: 100px;
+    padding: 0 10px;
+  }
 `
 
 export const ActionBar = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 16px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    button {
+      width: 50%;
+      padding: 16px;
+    }
+  }
 `
 
 export const ButtonCancelAndRemove = styled(Button)`

@@ -44,7 +44,7 @@ const ListaDeTarefas = () => {
         ${quantidade} tarefa(s) encontrada(s) como: "todas" ${complementacao}
       `
     } else {
-      mensagem = `${quantidade} tarefa(s) encontrada(s) como: "${criterio} = ${valor}" ${complementacao}`
+      mensagem = `${quantidade} tarefa(s) encontrada(s) como: "${criterio} | ${valor}" ${complementacao}`
     }
 
     return mensagem

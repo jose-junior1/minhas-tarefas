@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { pulsar } from '../../styles/animations'
+import variaveis from '../../styles/variaveis'
 
 export const Form = styled.form`
   max-width: 547px;
   width: 100%;
-  color: #666666;
+  color: ${variaveis.cinzaChumbo};
   font-size: 14px;
   font-weight: bold;
 
@@ -27,6 +28,17 @@ export const Form = styled.form`
     cursor: url('/pointer.png') 10 2, auto;
     &:hover {
       animation: ${pulsar} 1s infinite;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    padding: 0 16px;
+
+    button {
+      width: 100%;
+      padding: 16px;
     }
   }
 `
