@@ -57,11 +57,8 @@ O layout foi adaptado para funcionar bem em **dispositivos móveis**, com:
 
 ## 📷 Imagens do Projeto
 
-<p align="center">
-  <img src="./src/assets/img/home-com-filtro.png" alt="Tela inicial com filtro" width="500"  />
-  &nbsp;&nbsp;
-  <img src="./src/assets/img/tela-cadastro.png" alt="Tela de cadastro de tarefas" width="500" />
-</p>
+![Tela inicial](./public/home-com-filtro.png) &nbsp;
+![Tela de cadastro](./public/tela-cadastro.png)
 
 ---
 
@@ -91,7 +88,7 @@ Na branch v2, adicionei melhorias próprias, incluindo:
 
 ## 🔗 Acesse o projeto
 
-> 🔗 Acesse online: _[Em breve com Vercel](#)_
+> 🔗 Acesse online: _[Minhas tarefas](https://minhastarefas-lac.vercel.app/)_
 
 ---
 
